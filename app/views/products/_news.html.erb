@@ -1,0 +1,10 @@
+<% @news.each do |news| %>
+  <div class="trend 2">
+    <ul class="trend__ranking">
+      <li class="title__news"><%= news.title %></li>
+      <li class="name"><%= news.content %></li>
+      <li class="news_url"><a href="<%= news.news_url %>"><%= news.news_url %></a></li>
+      <li class="other"><%= news.created_at.strftime("%Y年%m月%d日 %H:%M:%S") %></li>
+    </ul>
+  </div>
+<% end %>

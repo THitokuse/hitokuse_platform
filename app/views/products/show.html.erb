@@ -1,0 +1,34 @@
+<div class="ranking">
+  <div class="user_title">
+    <div class="user_date">
+      <%= image_tag "snoopy.png", class: "user_image" %>
+      <div class="user_name"><a href="/users/<%= @product.user.id %>"><%= @product.user.name %></a></div>
+      <div class="user_post"><%= @product.created_at.strftime("%Y年%m月%d日 %H:%M:%S") %></div>
+    </div>
+    <h2 class="tweet_title"><%= @product.title %></h2>
+  </div>
+  <div class="product_url">
+    <%= @product.product_url.html_safe %>
+  </div>
+  <div class="user_text">
+    <%= markdown(@product.text).html_safe %>
+  </div>
+  <div class="container">
+    <% if current_user %>
+      <%= form_tag("/products/#{@product.id}/comments", method: :post, id: "new_comment") do %>
+        <textarea cols="30" name="text" rows="2" class="textbox"></textarea>
+        <input type="submit" class="comment-btn" name="SENT">
+      <% end %>
+    <% end %>
+    <div class="comments">
+      <% if @comments %>
+        <% @comments.each do |comment| %>
+          <p>
+            <strong><%= comment.user.name %></strong>
+            <%= comment.text %>
+          </p>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>

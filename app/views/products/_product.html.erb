@@ -1,0 +1,13 @@
+<% @products.each do |product| %>
+  <div class="trend 1 active">
+    <ul class="trend__ranking">
+      <li class="image"><%= product.product_url.html_safe %></li>
+      <li class="title"><%= product.title %></li>
+      <li class="user_text"><%= markdown(product.text).html_safe %></li>
+      <li class="name">by <%= product.user.name %></li>
+      <li class="other"><%= product.created_at.strftime("%Y年%m月%d日 %H:%M:%S") %></li>
+      <li class="other"><i class="fa fa-thumbs-up"></i></li>
+      <li class="other"><a href="/products/<%= product.id %>"><i class="fa fa-reply"></i></a></li>
+    </ul>
+  </div>
+<% end %>

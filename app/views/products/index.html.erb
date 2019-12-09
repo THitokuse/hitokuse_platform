@@ -1,0 +1,29 @@
+<div class="content">
+  <h1>Ads Together</h1>
+  <div class="text">
+    <p>広告を見て楽しむ、シェアするSNSサイト</p>
+  </div>
+</div>
+
+<div class="curriculums">
+  <div class="curriculums__nav">
+    <div class="curriculums__nav__title">
+      <i class="fa fa-line-chart mr-1">トレンド</i>
+      <p class="title-text">人気の広告を毎日更新</p>
+    </div>
+    <div class="ChangeElem_Btn_Content flex-box">
+      <p class="ChangeElem_Btn product" id="ads">広告</p>
+      <p class="ChangeElem_Btn news" id="news">ニュース</p>
+      <p class="ChangeElem_Btn like" id="like">いいね</p>
+    </div>
+  </div>
+  <li class="ChangeElem_Panel">
+    <%= render 'product' %>
+  </li>
+  <li class="ChangeElem_Panel">
+    <%= render 'news' %>
+  </li>
+  <li class="ChangeElem_Panel">
+    <%= render 'product' %>
+  </li>
+</div>

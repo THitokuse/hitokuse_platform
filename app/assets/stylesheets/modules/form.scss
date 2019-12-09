@@ -1,0 +1,26 @@
+.form_wrapper {
+  width: 100vw;
+  height: calc(100vh - 56px);
+  background-color: #f6f6f6;
+  .form_title {
+    margin: 20px 0 20px 10px;
+    width: calc(100vw - 45px);
+    height: 50px;
+    background-color: #fff;
+    font-size: 27px;
+    padding: 0 10px;
+    border-radius: 4px;
+  }
+  input.submit {
+    float: right;
+    width: 180px;
+    height: 60px;
+    margin: 20px 23px 0 0;
+    border-radius: 4px;
+    font-size: 21px;
+    color: black;
+    font-weight: bold;
+    background-color: #FF33CC;
+    -webkit-appearance: none;
+  }
+}

@@ -1,0 +1,16 @@
+<div class="wrapper">
+  <div class="main-login">
+    <h1 class="login">ログイン</h1>
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <div class="field">
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", label: false, placeholder: "メールアドレス", required: true %>
+        </div>
+        <div class="field">
+          <%= f.password_field :password, autocomplete: "current-password", label: false, placeholder: "パスワード", required: true %>
+        </div>
+        <div class="actions">
+          <%= f.submit "ログイン", id: "submit_btn" %>
+        </div>
+    <% end %>
+  </div>
+</div>

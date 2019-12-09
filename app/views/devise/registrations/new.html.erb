@@ -1,0 +1,21 @@
+<div class="wrapper">
+  <div class="main-login">
+    <h1 class="login">広告の世界へようこそ！</h1>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= devise_error_messages! %>
+      <%= f.hidden_field :admin, value: 2 %>
+      <div class="field">
+        <%= f.text_field :name, autofocus: true, label: false, placeholder: "ユーザー名", required: true %>
+      </div>
+      <div class="field">
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", label: false, placeholder: "メールアドレス", required: true %>
+      </div>
+      <div class="field">
+        <%= f.password_field :password, autocomplete: "new-password", label: false, placeholder: "パスワード", required: true %>
+      </div>
+      <div class="actions">
+        <%= f.submit "新規登録", id: "submit_btn" %>
+      </div>
+    <% end %>
+  </div>
+</div>

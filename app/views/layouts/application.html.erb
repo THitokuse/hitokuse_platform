@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>広告共有SNSサービス</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.5/marked.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.10/vue.js'></script>
+  </head>
+
+  <body>
+    <header>
+      <div class="header__logo"><a href="/"><%= image_tag 'hitokuse_logo.png', class: 'header__logo' %></a></div>
+      <div class="account">
+        <% unless user_signed_in? %>
+          <div class="list"><%= link_to 'ログイン', new_user_session_path %></div>
+          <div class="list"><%= link_to '新規登録', new_user_registration_path %></div>
+        <% else %>
+          <div class="list"><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, data: {confirm: 'ログアウトしますか?'} %></div>
+          <div class="list"><span class="fa fa-fw fa-pencil-square-o mr-1"></span><%= link_to '投稿する', new_product_path %></div>
+        <% end %>
+      </div>
+    </header>
+    <%= yield %>
+  </body>
+</html>

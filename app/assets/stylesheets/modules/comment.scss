@@ -1,0 +1,35 @@
+.textbox {
+  margin: 20px 0 20px 10px;
+  width: 500px;
+  height: 50px;
+  background-color: #fff;
+  padding: 0 10px;
+  border-radius: 4px;
+}
+.comment-btn {
+  float: right;
+  width: 80px;
+  height: 50px;
+  margin: 20px 23px 0 0;
+  border-radius: 4px;
+  font-size: 21px;
+  color: black;
+  font-weight: bold;
+  background-color: #FF33CC;
+  -webkit-appearance: none;
+}
+.container {
+  box-shadow: 0 0 10px rgba(#292929,0.2);
+  background-color: white;
+  box-sizing: border-box;
+}
+.comments {
+  padding: 5px;
+  margin-top: 15px;
+  a {
+    color: #57C3E9;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
